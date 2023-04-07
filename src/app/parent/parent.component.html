@@ -1,0 +1,23 @@
+<p>Parent Component!</p>
+<p>Parent Name: {{parentName}}</p>
+
+<app-child [name]='childName' [newChild]="newChildName" (eventName)="parentName = $event" (childData)="newParantName = $event"></app-child>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>NUMBER</th>
+            <th>NAME</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
